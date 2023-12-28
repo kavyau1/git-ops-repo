@@ -15,7 +15,7 @@ spec:
     - destination:
         host: raja.hello-app.svc.cluster.local
         port:
-          number: 8080
+          number: 80
 
     
   
