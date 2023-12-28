@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: raja-deployment
+  namespace: hello-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: raja
+  template:
+    metadata:
+      labels:
+        app: raja
+    spec:
+      containers:
+      - name: raja
+        image: ramakrishna8254/week:v1
+        ports:
+        - containerPort: 8080
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: raja
+  namespace: hello-app
+spec:
+  ports:
+  - name: http-port
+    protocol: TCP
+    port: 80
+    targetPort: 8080
+  selector:
+    app: raja
+  type: ClusterIP
