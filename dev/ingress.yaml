@@ -8,15 +8,17 @@ metadata:
   name: ingress
   namespace: istio-system
 spec:
+  ingressClassName: istio
   rules:
-  - host: testapp.cloudautomate.in
-    http:
+ 
+  - http:
       paths:
-      - path: /*
-        pathType: ImplementationSpecific
-        backend:
+      - backend:
           service:
             name: istio-ingressgateway
             port:
-              number: 80
+              number: 80      
+        path: /*
+        pathType: ImplementationSpecific
+      
 
