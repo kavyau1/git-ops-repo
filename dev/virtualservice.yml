@@ -13,8 +13,27 @@ spec:
         prefix: /
     route:
     - destination:
-        host: hello-app.raja-deployment
+        host: apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: hello-vs
+spec:
+  hosts:
+  - testapp.cloudautomate.in
+  gateways:
+  - gateway-internal
+  http:
+  - match:
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        host: raja.hello-app.svc.cluster.local
         port:
           number: 8080
+
+        port:
+          number: 8080
+  
 
 
