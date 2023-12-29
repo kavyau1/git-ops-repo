@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: raja
-        image: ramakrishna8254/week:v1
+        image: ramakrishna8254/week:v2
         ports:
         - containerPort: 8080
 
