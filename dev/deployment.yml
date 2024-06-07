@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: raja
-        image: 490167669940.dkr.ecr.ap-southeast-1.amazonaws.com/banrepo:java-18
+        image: ramakrishna8254/week:v1
         ports:
         - containerPort: 8080
 
