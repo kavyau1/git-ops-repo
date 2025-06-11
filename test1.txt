@@ -1,6 +1,3 @@
-this is  atest file
+this is  a test file
 
-
-
-
-this is revert file
+Testing for  revert commnad
